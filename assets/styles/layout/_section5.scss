@@ -1,0 +1,70 @@
+.quote{
+    @include center;
+    background: $colortxt2;
+    padding-bottom: 200px;
+    position: relative;
+    &::after{
+        content:"";
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 60%;
+        background: url(../../assets/img/gmap.jpg) center/cover;
+
+    }
+    .quote-container{
+        @include center;
+        flex-direction: column;
+        max-width: 1050px;
+        min-width: 800px;
+        width: 80%;
+        background: $colortxt1;
+        position: relative;
+        padding: 50px;
+        text-align: center;
+        z-index: 1;
+        @media screen and (max-width:800px) {
+            width: 100%;
+            min-width: auto;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+        }
+        blockquote{
+            font-family: $font3;
+            line-height: 25px;
+            p{
+                &::before{
+                    content: '\275d';
+                    font-family: $font2;
+                    font-size: 2rem
+                }
+                &::after{
+                    content: '\275e';
+                    font-family: $font2;
+                    font-size: 2rem
+                }
+              ;
+            }
+
+        }
+        h4{
+            font-family: $font3;
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin: 30px auto 20px;
+        }
+        h5{
+            font-family: $font3;
+            font-size: 1rem;
+            font-weight: 300;
+            color: $color1;
+        }
+    }
+}

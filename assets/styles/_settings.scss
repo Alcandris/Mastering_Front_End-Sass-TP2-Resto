@@ -1,0 +1,81 @@
+/*FONTS*/ 
+
+@font-face{
+    font-family: Allura;
+    src: url(../fonts/Allura-Regular.ttf);
+    font-display: swap;
+    
+}
+@font-face{
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Medium.ttf);
+    font-display: swap;
+}
+@font-face{
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Light.ttf);
+    font-display: swap;
+}
+
+/*Variables*/
+
+$font1 : Allura, cursive;
+$font2 : Poppins, serif;
+$font3 : Roboto, serif;
+
+$color1:rgb(166,114,69);
+$colortxt1 : rgb(238,238,238);
+$colortxt2: rgb(33,32,30);
+$color2: rgb(182,182,182);
+$color3: rgb(0,0,0);
+
+
+/*mixins*/
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*general*/
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+body{
+    background-color: $colortxt1;
+
+}
+
+h2{
+   font-family: $font1;
+   font-weight: 500;
+   color: $color1;
+   font-size: 2rem;
+   &::first-letter{
+    text-transform: uppercase;
+   }
+}
+
+h3, h4, h5, h6{
+    font-family: $font2;
+}
+ p{
+    font-family: $font3;
+ }
